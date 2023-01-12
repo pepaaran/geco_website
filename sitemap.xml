@@ -13,6 +13,10 @@
     <loc>https://geco-group.org/author/yunpeng-luo/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://geco-group.org/author/jaideep-joshi/</loc>
+    <lastmod>2022-12-09T14:11:58+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://geco-group.org/author/pepa-aran/</loc>
     <lastmod>2022-11-17T17:17:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -54,10 +58,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/iain-colin-prentice/</loc>
-    <lastmod>2022-12-09T14:11:58+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/author/jaideep-joshi/</loc>
     <lastmod>2022-12-09T14:11:58+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -3458,6 +3458,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/categories/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/author/emine-didem-durukan/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/et-al./</loc>
