@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://geco-group.org/author/koen-hufkens/</loc>
-    <lastmod>2023-01-13T11:26:13+01:00</lastmod>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/laura-marques/</loc>
@@ -18,11 +18,35 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/pepa-aran/</loc>
-    <lastmod>2022-11-17T17:17:30+01:00</lastmod>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/post/song-cn/</loc>
     <lastmod>2023-01-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/teaching/agds1/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/authors/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/author/benjamin-stocker/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/author/pascal-schneider/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/teaching/</loc>
+    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/tag/co2/</loc>
@@ -34,14 +58,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/publication-type/2/</loc>
-    <lastmod>2023-01-13T11:26:13+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/authors/</loc>
-    <lastmod>2023-01-13T11:26:13+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/author/benjamin-stocker/</loc>
     <lastmod>2023-01-13T11:26:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -70,10 +86,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/tag/experiments/</loc>
-    <lastmod>2023-01-13T11:26:13+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/</loc>
     <lastmod>2023-01-13T11:26:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -290,10 +302,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/tag/carbon-nitrogen-cycle/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/author/pascal-schneider/</loc>
     <lastmod>2023-01-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -3750,9 +3758,6 @@
     <loc>https://geco-group.org/people/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://geco-group.org/teaching/agds1/</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://geco-group.org/teaching/agds2/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -3775,9 +3780,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/keenan-trevor-f./</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://geco-group.org/teaching/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/tour/</loc>
