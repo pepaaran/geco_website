@@ -3750,6 +3750,15 @@
     <loc>https://geco-group.org/people/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://geco-group.org/teaching/agds1/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/teaching/agds2/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/teaching/agds_seminar/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://geco-group.org/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -3766,6 +3775,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/author/keenan-trevor-f./</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://geco-group.org/teaching/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://geco-group.org/tour/</loc>
