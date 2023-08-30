@@ -5,7 +5,7 @@
     <link>https://geco-group.org/post/</link>
       <atom:link href="https://geco-group.org/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 12 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://geco-group.org/media/logo_hue21406914225b119becd577af1fb7f4d_583632_300x300_fit_lanczos_3.png</url>
       <title>Blog</title>
@@ -13,9 +13,307 @@
     </image>
     
     <item>
+      <title>Expanding a data cube workflow for machine learning</title>
+      <link>https://geco-group.org/post/minicuber/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/post/minicuber/</guid>
+      <description>&lt;p&gt;With large collections of Earth Observation (EO) data becoming increasingly available, new possibilities to better understand and quantify environmental changes also arise. The acquisition, management, distribution, and analysis of such data is not trivial and can take up the majority of the time in modelling projects. This calls for frameworks and standardised pipelines for large EO datasets. In response to some of these challenges, multiple initiatives [1,2,3] propose data cubes (or minicubes) as a structured EO data catalogue.&lt;/p&gt;
+&lt;p&gt;A data cube refers to a multi-dimensional data structure, which naturally arises with EO data where there are both the spatial and temporal components. Ideally, multiple heterogenous data sources can be combined in a minicube. Discrepancies in spatial resolutions are dealt with by regridding and resampling the various products to a common grid. Temporal aggregations can also be performed to match different timeseries.&lt;/p&gt;
+&lt;h2 id=&#34;expanding-earthnets-minicuber&#34;&gt;Expanding Earthnet&amp;rsquo;s minicuber&lt;/h2&gt;
+&lt;p&gt;The earthnet-minicuber python package [3] offers the possibility to obtain data cubes for satellite imagery and some other EO sources, but is primarily tailored towards Sentinel-2 imagery. In an effort to push forward data cubes for environmental and climate impact modelling, we extend the code such as to allow better integration of ERA5 climate reanalysis data.&lt;/p&gt;
+&lt;p&gt;The additions to the code now allow a better combination of Sentinel-2 and ERA5 data in the minicubes. It is possible to download ERA5 hourly variables via Amazon Web Servives, and automatically match the temporal frequency of Sentinel-2 which is 5-daily. The type of aggregation can be defined for each variable depening on the user’s preference and the use-case.&lt;/p&gt;
+&lt;p&gt;You can access the updated minicuber code here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/earthnet-minicuber&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/geco-bern/earthnet-minicuber&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With minicubes available, the creation of pixel-level datasets ready for machine learning applications is the natural next step. Code has also been developed to generate these datasets after downloading minicubes.  In particular, one can integrate custom geospatial data to the minicube after having retrieved EO data online (for example, specific raster layers). We also offer a possibility to deal with cloud removal in the Sentinel-2 satellite imagery. Finally, context-target pairs of desired lengths can be extracted from the minicubes and are stored as compressed numpy arrays.&lt;/p&gt;
+&lt;p&gt;For more on generating datasets from minicubes, check out the code here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/seleneledain/forest_drought_forecasting/tree/main&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/seleneledain/forest_drought_forecasting/tree/main&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Data Cube &lt;a href=&#34;https://www.opendatacube.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.opendatacube.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Swiss Data Cube &lt;a href=&#34;https://www.swissdatacube.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.swissdatacube.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EarthNet Challenge &lt;a href=&#34;https://www.earthnet.tech/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.earthnet.tech/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GECO at EGU 2023</title>
+      <link>https://geco-group.org/post/geco_at_egu2023/</link>
+      <pubDate>Thu, 06 Apr 2023 16:46:36 +0200</pubDate>
+      <guid>https://geco-group.org/post/geco_at_egu2023/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Our group is contributing to this year&amp;rsquo;s EGU General Assembly with various sessions, talks, and posters! See below for when and where you can find us.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sessions&#34;&gt;Sessions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Thursday (27 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/session/44989&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;BG3.15:&lt;/strong&gt; Terrestrial ecosystem responses to global change: integrating experiments, ecosystem observations, and models to understand carbon, nutrient, and water cycling&lt;/a&gt; convened by Benjamin D. Stocker
+&lt;ul&gt;
+&lt;li&gt;Orals: Wed, 26 Apr, 08:30–10:00 (CEST), 10:45–12:25 (CEST), Room C&lt;/li&gt;
+&lt;li&gt;Poster Attendance: Fri, 28 Apr, 14:00–15:45 (CEST), Hall A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;talks&#34;&gt;Talks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Monday (24 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12108.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photosynthesis acclimates to warming through predictable changes in photosynthetic capacities, stomatal sensitivity and enzyme kinetics&lt;/a&gt; by Pascal D. Schneider (Mon, 24 Apr, 15:15–15:25, Room 2.95)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday (25 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9503.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Towards a better understanding of deep belowground water stores and their influence on land-atmosphere exchange and drought impacts&lt;/a&gt; by Benjamin D. Stocker (Tue, 25 Apr, 10:50–11:10, Room 3.16/17)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Wednesday (26 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-10303.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Divergent phenology response to nitrogen addition between a Mediterranean and a boreal forest&lt;/a&gt; by Yunpeng Luo (Wed, 26 Apr, 10:55–11:05, Room C)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Thursday (27 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9374.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecosystem C and N cycle interactions – diverse model representations and divergent model predictions versus collective empirical constraints&lt;/a&gt; by Benjamin D. Stocker (Thu, 27 Apr, 08:35–08:45, Room N2)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9757.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Roles of diversity and adaptation in the eco-evolutionary responses of biodiverse plant communities to climate change&lt;/a&gt; by Jaideep Joshi (Thu, 27 Apr, 09:05–09:15, Room N2)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12437.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forest Drought Impact Prediction based on Spatio-temporal Satellite Imagery and Weather Forecasts &amp;ndash; A Spatio-Temporal Approach using Convolutional LSTM Models&lt;/a&gt; by Emine Didem Durukan (Thu, 27 Apr, 11:20–11:30, Room B)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12672.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forest drought impact prediction based on satellite imagery and weather forecasts - a spatially distributed approach using a recurrent deep neural network&lt;/a&gt; by Sélène Ledain (Thu, 27 Apr, 11:30–11:40, Room B)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;posters&#34;&gt;Posters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-3984.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Global environmental controls of land nitrous oxide emissions inferred from field and experimental measurements&lt;/a&gt; by Yunke Peng (Attendance: Fri, 28 Apr, 08:30–10:15, Hall A, A.260)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-qr-code-to-this-blog-post&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://geco-group.org/post/geco_at_egu2023/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;QR-Code to this blog post.&#34; srcset=&#34;
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3dbb13ff34ddc76002709c53ec51a078.webp 400w,
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3d24883e367880aa4a2c3e5efac47656.webp 760w,
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3dbb13ff34ddc76002709c53ec51a078.webp&#34;
+               width=&#34;250&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      QR-Code to this blog post.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Every ton of CO2 counts</title>
+      <link>https://geco-group.org/post/every-ton/</link>
+      <pubDate>Mon, 20 Feb 2023 22:37:04 +0100</pubDate>
+      <guid>https://geco-group.org/post/every-ton/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;We are not the last generation that can make a change but the first of many that must. Here are some thoughts I wanted to share with fellow snow enthusiasts and others about what cumulative emissions and tipping points mean for the framing of the need for climate action.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This blog was originially published in German for &lt;a href=&#34;https://www.protectourwinters.ch/de/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Protect Our Winters, Switzerland&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The dramatic images of ski slopes in the Alps, desperately groomed with artificial snow and eerily set against a backdrop of green mountains, offer a glimpse of the future. And the future strikes faster than many of us expected. At stake here is what we hold dear. These images are a wake-up call to keep the world the way we love it as outdoor enthusiasts, skiers, snowboarders, climbers, sledders, skaters, snow hikers, and other snow lovers. We are reminded that the climate is changing, that the snow is receding, and that the world as we know it is melting away and is becoming a memory of our past. It&amp;rsquo;s also a wake-up call to protect our winters. &lt;a href=&#34;https://www.protectourwinters.ch/de/handeln/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;POW shows that we can&lt;/a&gt;. Our enthusiasm for nature drives us to preserve it. Climate protection and winter sports belong together.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Relative snow depth&#34; srcset=&#34;
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_58f050c97ba705a8cefbc375bf9234c5.webp 400w,
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_bdd7b446725500c9fd68fbd23d7b787f.webp 760w,
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_58f050c97ba705a8cefbc375bf9234c5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Snow depth in Switzerland as a percentage of the long-term average for the respective day of the year. From &lt;a href=&#34;https://whiterisk.ch/de/snow/comparative-depth&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SLF whiterisk.ch&lt;/a&gt;, 21 February 2023. The map shows that the current snow depth is only between 0 and 60% of the typical depth observed around the 21st of February (average across a 30-year reference period, see &lt;a href=&#34;https://www.slf.ch/de/lawinenbulletin-und-schneesituation/schneekarten/details-zu-schneehoehe-relativ.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It is clear that our enthusiasm for the crude wilderness and the cold winter leaves traces. There is no life without traces. That&amp;rsquo;s POW&amp;rsquo;s message: we can and should strive to reduce our impact on the planet and advocate for change, even as we acknowledge that we are not perfect and leave traces. We are imperfect advocates. Yet it is better to be imperfect advocates than to bury our heads in the sand. This message speaks to me as an avid skier, as someone who feels almost patriotic when the alpenglühen of the snow-covered Alps sets in (their fiery appearance of the snow-covered mountains in the setting sun). And it speaks to me as a climate scientist. Because it makes sense - scientifically! Here&amp;rsquo;s why.&lt;/p&gt;
+&lt;p&gt;Suppose I were a professional skier (which I dreamed of being at some point in my life, and perhaps even today). I decide to avoid two of my several planned flights this year. This benefits the climate just as much as if you decide not to book your only two planned flights for your next vacation and celebrate an absolutely flight-free year. Although the latter seems purer, more determined, feels more rewarding, and definitely makes for a better-sounding Instagram post, the climate doesn&amp;rsquo;t care. A ton of CO&lt;sub&gt;2&lt;/sub&gt; avoided is a ton avoided - no matter by whom, when, or where on Earth.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Global mean temperature and cumulative carbon emissions&#34; srcset=&#34;
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_86cb14d443fb19f3c4fad6a208ecfd7c.webp 400w,
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_b6f3ce19dbf99bdc142cf34f7971b88f.webp 760w,
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_86cb14d443fb19f3c4fad6a208ecfd7c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;457&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Top: The more CO&lt;sub&gt;2&lt;/sub&gt; is emitted, the more the mean global temperature rises. CO&lt;sub&gt;2&lt;/sub&gt; is mainly emitted by fossil fuel combustion and deforestation. The curve is composed of the relationship between the summed CO&lt;sub&gt;2&lt;/sub&gt; production and the temperature increase since 1850. The data are observations for the past (black line and grey band) and from projections with climate models following different future scenarios (SSP1-1.9 is a scenario with rapid reduction of CO&lt;sub&gt;2&lt;/sub&gt; emissions, SSP5-8.5 is a scenario of strong increase of CO&lt;sub&gt;2&lt;/sub&gt; emissions). Graphic adapted from IPCC AR6 WG1 Summary for Policymakers.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Climate research shows that each ton of CO&lt;sub&gt;2&lt;/sub&gt; we emit causes a certain amount of global warming (see graph above). The warming per ton of CO&lt;sub&gt;2&lt;/sub&gt; emitted is roughly constant. Observations and projections from climate models show that the average global temperature is increasing with the sum of all CO&lt;sub&gt;2&lt;/sub&gt; emissions since 1850.&lt;/p&gt;
+&lt;p&gt;This means that every ton, every gram of CO&lt;sub&gt;2&lt;/sub&gt; counts. Every ton contributes equally to climate heating. The climate doesn&amp;rsquo;t care when, where, and anyway by whom the CO&lt;sub&gt;2&lt;/sub&gt; is emitted. A ton avoided is a ton avoided. This fact contains an important message: it is never too late to avoid a ton of CO&lt;sub&gt;2&lt;/sub&gt; emissions. Every generation must work to leave the carbon in the ground and save the remaining forests and other carbon-rich ecosystems from their destruction. It is never too late. However, we must continue climate action efforts - starting now and for all generations to come.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We are not the last generation to save the planet. We are the first of many future generations to make a change.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It also means that we are not the last generation to make a difference. On the contrary. We are the first of many generations to make a change. We are the first generation that can seriously turn the wheel in terms of personal life choices and political change that we can set in motion by voting, electing politicians, and by protesting. Here in Switzerland, where I live, we are the first generation to vote on important climate legislation, and we have a second chance this year with the upcoming vote on the counter-proposal to the Glacier Initiative.&lt;/p&gt;
+&lt;p&gt;It would be fatal to abandon efforts even if the world has warmed by 1.5 degrees Celsius - the number the global community has set as a target. There is no magic threshold at this temperature rise. There are tipping points in the climate system, but we don&amp;rsquo;t know exactly when they will be reached. That&amp;rsquo;s a big &lt;a href=&#34;https://www.science.org/doi/10.1126/science.abn7950&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research question&lt;/a&gt; that&amp;rsquo;s still open. But it doesn&amp;rsquo;t matter for our decision to protect our winters.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s like a white-out - the situation when you completely lose your bearings in the fog and snow. To go further would be to enter unknown and potentially dangerous terrain and to continue to approach a possible precipice. In this situation, we know it is safer to turn around and retrace our steps. By burning fossil fuels and cutting down forests, we have already entered unknown terrain. The climate today is not the same as it was fifty years ago. However, the further we move into this unknown terrain, the more damage we have to expect to our ecosystems, our food production, and our infrastructure. With each additional ton of carbon burned, we march further toward uncertainty. The risk of unexpected climate events and crossing a dangerous climate tipping point increases the further we advance into the unknown terrain. More climate change will make our lives more difficult. For this reason, we must do everything we can to stay in the safe zone.
+We have already warmed the planet. Some loss of glaciers and snow is already underway. Even with stringent climate action, we will lose more glaciers in the coming decades. &lt;a href=&#34;https://www.science.org/doi/10.1126/science.abo1324&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This recent study&lt;/a&gt; backs up this prediction with disturbing numbers. Glaciers behave like a large cargo ship. Even if the engine stops, the ship will keep going for a while. Even if we drastically reduce CO&lt;sub&gt;2&lt;/sub&gt; emissions, many glaciers will disappear.&lt;/p&gt;
+&lt;p&gt;When it comes to warming the planet, it&amp;rsquo;s a different story. As soon as the emission of greenhouse gases is stopped, we stop heating the Earth (as explained in &lt;a href=&#34;https://www.carbonbrief.org/explainer-will-global-warming-stop-as-soon-as-net-zero-emissions-are-reached/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this blog&lt;/a&gt;). It is in our own hands. This is very encouraging. It means we can turn the wheel to avoid even more dangerous levels of climate change and trespassing dangerous tipping points.&lt;/p&gt;
+&lt;p&gt;We must avoid emissions of CO&lt;sub&gt;2&lt;/sub&gt; and other greenhouse gases to prevent further warming of the planet. Every ton of CO&lt;sub&gt;2&lt;/sub&gt; counts, whether it&amp;rsquo;s today or tomorrow. No matter what you did yesterday, you can start fresh the next day. You don&amp;rsquo;t have to be perfect to take action on climate change and be part of the change we need to &lt;strong&gt;protect our winters&lt;/strong&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.protectourwinters.ch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Protect Our Winters&lt;/a&gt; is a non-governmental organization that advocates for climate action and political change. POW speaks to snow enthusiasts and other concerned, but winter fun-loving people through their &lt;a href=&#34;https://www.protectourwinters.ch/de/netzwerk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alliance Members&lt;/a&gt; - professional skiers, snowboarders and others. As a ski touring aficionado and climate scientist, I am proud to be part of the &lt;a href=&#34;https://www.protectourwinters.ch/de/netzwerk/science-alliance/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;POW Science Alliance&lt;/a&gt;. I am convinced that speaking to a wide diversity of voters and fellow Earthlings through shared values and a common understanding of what we want to protect (winters!) is a powerful approach to motivating climate action.&lt;/em&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_621bec54e3701bfb1bdaa6898e0feaf4.webp 400w,
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_5dc49a1e98a6ef25664364981e0bfdb9.webp 760w,
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_621bec54e3701bfb1bdaa6898e0feaf4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimal root zone water storage capacity</title>
+      <link>https://geco-group.org/post/rooting-zone/</link>
+      <pubDate>Thu, 09 Feb 2023 07:56:38 +0100</pubDate>
+      <guid>https://geco-group.org/post/rooting-zone/</guid>
+      <description>&lt;p&gt;Root zone water storage capacity (S&lt;sub&gt;0&lt;/sub&gt;) is related to the rooting depth and the water holding capacity across the soil profile. It is an important property in determining ecosystem photosynthesis and evapotranspiration in rain-free periods and controls the sensitivity of ecosystems and their carbon and water fluxes to drought conditions. While S&lt;sub&gt;0&lt;/sub&gt; is an essential parameter of land surface models, it is almost impossible to measure in the field, at least not across large scales. Considering that S&lt;sub&gt;0&lt;/sub&gt; is also highly variable across small spatial scales, and that it varies massively between species and between different biomes, it is really a sort of elephant in the room for large-scale drought impacts modeling.&lt;/p&gt;
+&lt;p&gt;Previous studies have estimated the root zone water storage capacity based on a water mass balance approach where the parallel time series of evapotranspiration (ET) and precipitation (&lt;em&gt;P&lt;/em&gt;) are considered (e.g., &lt;a href=&#34;http://doi.wiley.com/10.1002/2014GL061668&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gao et al., 2014&lt;/a&gt;). This approach was also the starting point of our analysis, which has been published today in &lt;em&gt;Nature Geoscience&lt;/em&gt; &lt;a href=&#34;https://www.nature.com/articles/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Stocker et al., 2023)&lt;/a&gt;. Using remote sensing and climate reanalysis data, provided at ~5 km resolution, we derived continuous daily time series of the cumulative water deficit (CWD) over the years 2003-2017 for each pixel across the globe. Knowing how much water is lost from the land surface during dry periods is the key for estimating how much locally stored water plants have access to. With this rationale, we calculated a first estimate for the global distribution of S&lt;sub&gt;0&lt;/sub&gt; , informed by extreme values of annual CWD maxima in each pixel.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-spatial-variation-of-the-rooting-zone-water-storage-capacity-estimated-by-cumulative-water-deficit-maxima&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Rooting zone water storage capacity&#34; srcset=&#34;
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_f80d1cdd62d0065e143eb70af588079d.webp 400w,
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_19c1428ff1891b5eea41f6d59d54c391.webp 760w,
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_f80d1cdd62d0065e143eb70af588079d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Spatial variation of the rooting zone water storage capacity, estimated by cumulative water deficit maxima.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;It should be noted that a key ingredient to such diagnosed S&lt;sub&gt;0&lt;/sub&gt; estimates is the ET data. The challenging aspect is that most remote sensing-based ET products make an assumption about S&lt;sub&gt;0&lt;/sub&gt; - either directly or indirectly - for determining the sensitivity of ET to a drying of the soil. Of course, when using such ET products, the diagnosed S&lt;sub&gt;0&lt;/sub&gt; just reflects assumptions embodied in the algorithm used for estimating ET. There is a clear risk for circularity. This made us search for ET estimates that are free of such an assumption. As an additional help in guiding our search for a suitable ET estimate was its performance when evaluated against local measurements. Our search identified a clear winner: ALEXI-ET (&lt;a href=&#34;https://doi.org/10.1002/2017GL074952&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hain &amp;amp; Anderson, 2017&lt;/a&gt;). Instead of relying on an a priori specified water stress function, it makes use of information gleaned from surface temperature remote sensing and parallel climate reanalysis. The ALEXI algorithm thus infers ET from the surface and atmospheric energy budget. Furthermore, our evaluation of different remote sensing-based ET products revealed that ALEXI-ET yields ET estimates that exhibit no systematic bias with the level of water stress - in contrast to the alternatives we tested. This gave us confidence to move ahead.&lt;/p&gt;
+&lt;p&gt;The next question we addressed was whether the CWD maxima reflect root zone dimensions or (just) the hydroclimate. Interpreting apparent CWD maxima as a reflection of the rooting depth implicitly assumes that the actual rooting zone water storage capacity is just large enough and roots just deep enough to yield the apparent water deficits in the dry season. Given the opportunity costs of building deep roots, such a sizing would be optimal from an eco-evolutionary perspective. To test whether this is the case, we looked at the vegetation activity and analyzed how it responds to water deficits. As a measure for vegetation activity, we focus on sun-induced fluorescence (SIF), normalized by incident solar radiation, and on the evaporative fraction, defined as ET divided by net radiation. Regressing vegetation activity against CWD yields information about the sensitivity of vegetation to water stress from which we estimated the CWD at which vegetation activity ceases. If this “cessation CWD” agrees with the magnitude of CWD extremes, we have a further indication that roots are indeed just deep enough to get the water needed to sustain rare drought events. And indeed, we found close correspondence between the two quantities.&lt;/p&gt;
+&lt;p&gt;As a further test of our remote sensing-based S&lt;sub&gt;0&lt;/sub&gt; estimates, we made use of a recently published comprehensive compilation of field data of rooting depths from over 5000 individual field observations across the globe and covering all major biomes (&lt;a href=&#34;https://doi.org/10.1111/nph.18031&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumber-Davila et al., 2022&lt;/a&gt;). Also at this scale, we found consistent patterns. The deepest roots are found where seasonal water deficits are largest and the shallowest roots are found in climates where annual CWD maxima are small. Interestingly, the largest root zone water storage capacities and rooting depths are diagnosed from space and observed in the field not in the driest climates, but in monsoonal climates and biomes with perennial plants and where (more or less) green vegetation cover is maintained throughout the year. In contrast, vegetation pursues an “ephemeral” strategy in the driest climates - relieving the necessity of rooting excessively deep for maintaining activity. This is probably also an expression of an optimal balancing of trade-offs - investing in deep roots is only a viable option if it is not outweighed by the costs of rebuilding leaves.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-modeled-and-observed-rooting-depth-by-biomes&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Rooting depth by biomes&#34; srcset=&#34;
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1fe2bf7496694aa2593d3e02a8600db4.webp 400w,
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_8a05651591dd49f01eb960dd58459a14.webp 760w,
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1fe2bf7496694aa2593d3e02a8600db4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;369&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Modeled and observed rooting depth by biomes.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Apparent cumulative water deficits, the sensitivity of vegetation activity to dry conditions, and the rooting depth of plants converge to consistent patterns. The implications of these insights are manifold. First, we now have information about the global distribution of the apparent rooting zone water storage capacity which can be used to better parametrise land surface models. This may be useful for removing persistent bias in ET simulations (&lt;a href=&#34;https://doi.org/10.1002/2017JD027194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ma et al., 2018&lt;/a&gt;). Second, our maps document large variations of S&lt;sub&gt;0&lt;/sub&gt; across multiple scales - across the Earth’s biomes, across land uses (irrigated croplands emerge as hotspots of water losses), and across topography (larger water losses along rivers and deltas than in flat upland areas). This insight is enabled by the high spatial resolution of our global-scale analysis. Third, and maybe most strikingly, our estimates of S&lt;sub&gt;0&lt;/sub&gt; suggest that plants source more water than can be stored in two meters of soil across a third of the Earth’s surface. We don’t know the soil depth across the globe very well. Models have to rely on assumptions and commonly use prescribed rooting depths. The picture drawn from our S&lt;sub&gt;0&lt;/sub&gt; estimates and from other emerging research (&lt;a href=&#34;https://doi.org/10.1073/pnas.1800141115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rempe et al., 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1038/s41586-021-03761-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;McCormick et al., 2021&lt;/a&gt;) is that plant-accessible water stores are surprisingly large in many places and that water stored in the weathered bedrock and groundwater probably play a more important role in regulating land-atmosphere exchange of water vapor and photosynthesis than is currently appreciated and considered in land surface and Earth system models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You can read the full paper here:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Stocker, B.D., Tumber-Davila, S.J., Konings, A.G., Anderson, M.B., Hain, C. and Jackson, R.B.: Global patterns of water storage in the rooting zones of vegetation, &lt;em&gt;Nature Geoscience&lt;/em&gt;, &lt;a href=&#34;https://www.nature.com/articles/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/s41561-023-01125-2&lt;/a&gt;, 2023&lt;/p&gt;
+&lt;h2 id=&#34;data-download&#34;&gt;Data download&lt;/h2&gt;
+&lt;p&gt;Global datasets of cumulative water deficit maxima and apparent rooting depth are available on &lt;a href=&#34;https://doi.org/10.5281/zenodo.5515246&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zenodo&lt;/a&gt; as NetCDF files.&lt;/p&gt;
+&lt;h2 id=&#34;open-access-code&#34;&gt;Open access code&lt;/h2&gt;
+&lt;p&gt;The algorithm to derive cumulative water deficit time series and a list of water deficit events (consecutive days with a negative water balance), is made available as an &lt;a href=&#34;https://geco-bern.github.io/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R package&lt;/a&gt;, published on Zenodo with DOI &lt;a href=&#34;https://doi.org/10.5281/zenodo.5359053&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.5281/zenodo.5359053&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Analysis code is available from GitHub repository &lt;a href=&#34;https://github.com/geco-bern/mct/tree/v4.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;mct&lt;/code&gt; at tag v4.0&lt;/a&gt;, published on Zenodo with DOI &lt;a href=&#34;https://doi.org/10.5281/zenodo.7429129&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.5281/zenodo.7429129&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;global-map-as-poster&#34;&gt;Global map as poster&lt;/h2&gt;
+&lt;p&gt;A0-sized posters of high-fidelity (vector graphics, PDF) maps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rooting-zone water-storage capacity (&lt;a href=&#34;https://github.com/geco-bern/GECO_media/blob/main/publications/Stocker_2023a_NGS/poster_mct_hires.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download link&lt;/a&gt;, 45 MB)&lt;/li&gt;
+&lt;li&gt;apparent rooting depth (&lt;a href=&#34;https://github.com/geco-bern/GECO_media/blob/main/publications/Stocker_2023a_NGS/poster_mct_zroot_hires.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download link&lt;/a&gt;, 48 MB)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A Song of Carbon And Nitrogen: Part 1 - The Setting</title>
       <link>https://geco-group.org/post/song-cn/</link>
-      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Jan 2023 22:37:04 +0100</pubDate>
       <guid>https://geco-group.org/post/song-cn/</guid>
       <description>&lt;h2 id=&#34;part-1---the-setting&#34;&gt;Part 1 - The Setting&lt;/h2&gt;
 &lt;p&gt;Have you ever looked at a forest and wondered about where all this wood comes from? Like all plants, trees have the magnificent capability to draw gaseous carbon dioxide from the air and turn it into hard touchable wood. But trees do not only need carbon to grow. Like humans, they need other nutrients to build their leaves, stems, and roots. A major nutrient to do so is nitrogen - another element well hidden from our eyes that actually makes up about 80% of our earth&amp;rsquo;s atmosphere.&lt;/p&gt;

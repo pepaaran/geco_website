@@ -5,7 +5,7 @@
     <link>https://geco-group.org/</link>
       <atom:link href="https://geco-group.org/index.xml" rel="self" type="application/rss+xml" />
     <description>Geocomputation and Earth Observation</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://geco-group.org/media/logo_hue21406914225b119becd577af1fb7f4d_583632_300x300_fit_lanczos_3.png</url>
       <title>Geocomputation and Earth Observation</title>
@@ -13,9 +13,655 @@
     </image>
     
     <item>
+      <title>Expanding a data cube workflow for machine learning</title>
+      <link>https://geco-group.org/post/minicuber/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/post/minicuber/</guid>
+      <description>&lt;p&gt;With large collections of Earth Observation (EO) data becoming increasingly available, new possibilities to better understand and quantify environmental changes also arise. The acquisition, management, distribution, and analysis of such data is not trivial and can take up the majority of the time in modelling projects. This calls for frameworks and standardised pipelines for large EO datasets. In response to some of these challenges, multiple initiatives [1,2,3] propose data cubes (or minicubes) as a structured EO data catalogue.&lt;/p&gt;
+&lt;p&gt;A data cube refers to a multi-dimensional data structure, which naturally arises with EO data where there are both the spatial and temporal components. Ideally, multiple heterogenous data sources can be combined in a minicube. Discrepancies in spatial resolutions are dealt with by regridding and resampling the various products to a common grid. Temporal aggregations can also be performed to match different timeseries.&lt;/p&gt;
+&lt;h2 id=&#34;expanding-earthnets-minicuber&#34;&gt;Expanding Earthnet&amp;rsquo;s minicuber&lt;/h2&gt;
+&lt;p&gt;The earthnet-minicuber python package [3] offers the possibility to obtain data cubes for satellite imagery and some other EO sources, but is primarily tailored towards Sentinel-2 imagery. In an effort to push forward data cubes for environmental and climate impact modelling, we extend the code such as to allow better integration of ERA5 climate reanalysis data.&lt;/p&gt;
+&lt;p&gt;The additions to the code now allow a better combination of Sentinel-2 and ERA5 data in the minicubes. It is possible to download ERA5 hourly variables via Amazon Web Servives, and automatically match the temporal frequency of Sentinel-2 which is 5-daily. The type of aggregation can be defined for each variable depening on the user’s preference and the use-case.&lt;/p&gt;
+&lt;p&gt;You can access the updated minicuber code here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/earthnet-minicuber&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/geco-bern/earthnet-minicuber&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With minicubes available, the creation of pixel-level datasets ready for machine learning applications is the natural next step. Code has also been developed to generate these datasets after downloading minicubes.  In particular, one can integrate custom geospatial data to the minicube after having retrieved EO data online (for example, specific raster layers). We also offer a possibility to deal with cloud removal in the Sentinel-2 satellite imagery. Finally, context-target pairs of desired lengths can be extracted from the minicubes and are stored as compressed numpy arrays.&lt;/p&gt;
+&lt;p&gt;For more on generating datasets from minicubes, check out the code here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/seleneledain/forest_drought_forecasting/tree/main&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/seleneledain/forest_drought_forecasting/tree/main&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Data Cube &lt;a href=&#34;https://www.opendatacube.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.opendatacube.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Swiss Data Cube &lt;a href=&#34;https://www.swissdatacube.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.swissdatacube.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EarthNet Challenge &lt;a href=&#34;https://www.earthnet.tech/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.earthnet.tech/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Postdoc in drone-based vegetation water stress monitoring</title>
+      <link>https://geco-group.org/event/postdoc_uav/</link>
+      <pubDate>Mon, 01 May 2023 08:46:40 +0100</pubDate>
+      <guid>https://geco-group.org/event/postdoc_uav/</guid>
+      <description>&lt;p&gt;Our group for Geocomputation and Earth Observation develops new model and data integration methods to gain a mechanistic understanding of the terrestrial biosphere. We are hosted at the Geography Institute of the University of Bern and work at the intersection of Earth system science, remote sensing, ecology, and hydrology.&lt;/p&gt;
+&lt;p&gt;This position serves to establish and consolidate near-range remote sensing capacities in our research group and integrate field-based research within the context of our research on drought impact monitoring and prediction.&lt;/p&gt;
+&lt;h2 id=&#34;tasks&#34;&gt;Tasks&lt;/h2&gt;
+&lt;p&gt;You will plan and perform a drone-based surface reflectance remote sensing campaign for water stress detection in Swiss forests. You will analyse data and lead publications on vegetation water stress relations across landscape-scale gradients.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;p&gt;The candidate must hold a Ph.D. degree in a relevant field. Experience in drone-based remote sensing with completed training in the operation of UAVs, ideally with license, experience in managing field campaigns, and experience with close-range remote sensing data post-processing are required. The candidate should demonstrate proficient English written and oral skills. We expect a collaborative mentality and enthusiasm for the development of our computational infrastructure and open-source software.&lt;/p&gt;
+&lt;h2 id=&#34;we-offer&#34;&gt;We offer&lt;/h2&gt;
+&lt;p&gt;We offer the candidate to be part of a growing group with a strong collaborative philosophy and and a tight international network of leading partners, providing further career development opportunities toward future academic or industry positions. You will benefit from a supporting academic environment and from the attractive quality of life in Switzerland.&lt;/p&gt;
+&lt;p&gt;We look forward to receiving your online application including the following documents: Motivation letter (max. 2 pages, with a statement of research interests and demonstrated experience with software development projects), a CV, copies of academic qualifications and the names and e-mail addresses of three referees. Please note that we exclusively accept applications submitted through our online application portal. Applications via email or postal services will not be considered. We continue recruitment until a suitable candidate is found. The start of this position is at your earliest convenience. The position is offered for one year with possibility for continuation.&lt;/p&gt;
+&lt;p&gt;Questions regarding the position should be directed to Dr. Koen Hufkens (&lt;a href=&#34;mailto:koen.hufkens@giub.unibe.ch&#34;&gt;koen.hufkens@giub.unibe.ch&lt;/a&gt;) (no applications). You can apply for this position by following &lt;a href=&#34;https://ohws.prospective.ch/public/v1/redirect/ebd3c469-7556-435a-9857-c9a4e8f717eb/ats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;THIS LINK&lt;/a&gt; to the online submission platform.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GECO at EGU 2023</title>
+      <link>https://geco-group.org/post/geco_at_egu2023/</link>
+      <pubDate>Thu, 06 Apr 2023 16:46:36 +0200</pubDate>
+      <guid>https://geco-group.org/post/geco_at_egu2023/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Our group is contributing to this year&amp;rsquo;s EGU General Assembly with various sessions, talks, and posters! See below for when and where you can find us.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;sessions&#34;&gt;Sessions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Thursday (27 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/session/44989&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;BG3.15:&lt;/strong&gt; Terrestrial ecosystem responses to global change: integrating experiments, ecosystem observations, and models to understand carbon, nutrient, and water cycling&lt;/a&gt; convened by Benjamin D. Stocker
+&lt;ul&gt;
+&lt;li&gt;Orals: Wed, 26 Apr, 08:30–10:00 (CEST), 10:45–12:25 (CEST), Room C&lt;/li&gt;
+&lt;li&gt;Poster Attendance: Fri, 28 Apr, 14:00–15:45 (CEST), Hall A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;talks&#34;&gt;Talks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Monday (24 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12108.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Photosynthesis acclimates to warming through predictable changes in photosynthetic capacities, stomatal sensitivity and enzyme kinetics&lt;/a&gt; by Pascal D. Schneider (Mon, 24 Apr, 15:15–15:25, Room 2.95)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tuesday (25 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9503.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Towards a better understanding of deep belowground water stores and their influence on land-atmosphere exchange and drought impacts&lt;/a&gt; by Benjamin D. Stocker (Tue, 25 Apr, 10:50–11:10, Room 3.16/17)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Wednesday (26 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-10303.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Divergent phenology response to nitrogen addition between a Mediterranean and a boreal forest&lt;/a&gt; by Yunpeng Luo (Wed, 26 Apr, 10:55–11:05, Room C)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Thursday (27 April)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9374.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecosystem C and N cycle interactions – diverse model representations and divergent model predictions versus collective empirical constraints&lt;/a&gt; by Benjamin D. Stocker (Thu, 27 Apr, 08:35–08:45, Room N2)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-9757.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Roles of diversity and adaptation in the eco-evolutionary responses of biodiverse plant communities to climate change&lt;/a&gt; by Jaideep Joshi (Thu, 27 Apr, 09:05–09:15, Room N2)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12437.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forest Drought Impact Prediction based on Spatio-temporal Satellite Imagery and Weather Forecasts &amp;ndash; A Spatio-Temporal Approach using Convolutional LSTM Models&lt;/a&gt; by Emine Didem Durukan (Thu, 27 Apr, 11:20–11:30, Room B)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-12672.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Forest drought impact prediction based on satellite imagery and weather forecasts - a spatially distributed approach using a recurrent deep neural network&lt;/a&gt; by Sélène Ledain (Thu, 27 Apr, 11:30–11:40, Room B)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;posters&#34;&gt;Posters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://meetingorganizer.copernicus.org/EGU23/EGU23-3984.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Global environmental controls of land nitrous oxide emissions inferred from field and experimental measurements&lt;/a&gt; by Yunke Peng (Attendance: Fri, 28 Apr, 08:30–10:15, Hall A, A.260)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-qr-code-to-this-blog-post&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;a href=&#34;https://geco-group.org/post/geco_at_egu2023/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img alt=&#34;QR-Code to this blog post.&#34; srcset=&#34;
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3dbb13ff34ddc76002709c53ec51a078.webp 400w,
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3d24883e367880aa4a2c3e5efac47656.webp 760w,
+               /post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/post/geco_at_egu2023/qr_hud7be1fef60d7ca79fe62725cd577b339_23547_3dbb13ff34ddc76002709c53ec51a078.webp&#34;
+               width=&#34;250&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      QR-Code to this blog post.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Bachelor thesis - Soil texture for ET modelling</title>
+      <link>https://geco-group.org/event/soiltext_et/</link>
+      <pubDate>Tue, 21 Feb 2023 10:50:18 +0100</pubDate>
+      <guid>https://geco-group.org/event/soiltext_et/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Global terrestrial gross primary production (GPP), i.e., the uptake of CO2 by terrestrial plants, is often limited by the availability of soil water for evapotranspiration (ET). The amount of water a plant can take up from the soil depends on the soil texture, the depth of plant roots, and the storage capacity of the soil in the plant’s rooting zone. While long-term measurements of GPP and ET are available from sites across the globe (called the FLUXNET network), soil texture properties are not available in a common database. This project aims to assemble a datset of soil properties and plant traits at FLUXNET sites, and use it to predict ET over daily and weekly timescales.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The goals of this project are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Assemble data on soil properties and traits at FLUXNET sites&lt;/li&gt;
+&lt;li&gt;Calibrate an existing water balance model based on its predictions of top-soil moisture content&lt;/li&gt;
+&lt;li&gt;Predict ET and cumulative water deficits and validate the same with flux data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to land-atmosphere exchange and the carbon cycle - everything else can be learned!&lt;/li&gt;
+&lt;li&gt;Interest in working with large datasets of the terrestrial biosphere.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are an advantage.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literature&#34;&gt;Literature&lt;/h2&gt;
+&lt;p&gt;Stocker, B.D., Tumber-Dávila, S.J., Konings, A.G. &lt;em&gt;et al.&lt;/em&gt;  Global patterns of water storage in the rooting zones of vegetation. &lt;em&gt;Nat. Geosci.&lt;/em&gt;  (2023). &lt;a href=&#34;https://doi.org/10.1038/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1038/s41561-023-01125-2&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Prof. Benjamin Stocke&lt;/li&gt;
+&lt;li&gt;Dr. Jaideep Joshi&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Master thesis - Modelling optimal acclimation across canopy gradients</title>
+      <link>https://geco-group.org/event/canopy_gradients/</link>
+      <pubDate>Tue, 21 Feb 2023 09:09:34 +0100</pubDate>
+      <guid>https://geco-group.org/event/canopy_gradients/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;The rate of CO2 uptake by photosynthesis is determined by the acclimation of leaves to the prevailing light environment. In dense forests, light intensity decreases exponentially as we go from the top of the canopy towards the ground, as light is absorbed and scattered by leaves. However, the acclimated photosynthetic capacity of understorey leaves is higher than what we would expect based on the exponential decay of light. This is because these leaves acclimate to sun-flecks - small flecks of sunlight appear in understory due to gaps in the canopy, and because of the movement of the sun through the sky. Therefore, predicting the acclimation of understorey leaves requires considering the variability in light availability.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The goals of this project are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To quantify the variability in direct and diffuse sunlight in the understorey, either using either a radiative transfer model, or using fat-tailed probability distributions&lt;/li&gt;
+&lt;li&gt;To use the P-model of photosynthesis to predict the optimal acclimation of photosynthetic capacity given the distribution of light intensity&lt;/li&gt;
+&lt;li&gt;To test the model predictions with data on canopy gradients from the CH-Lae site and possibly from the Netravali site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to plant physiology.&lt;/li&gt;
+&lt;li&gt;Basic understanding of mathematical modelling and a keen interest to delve deeper into modelling and programming (R, Fortran)&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are a prerequisite.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;Implement the P-model (or some concept of optimality) in SPA (or any other model that simulates light gradient in canopy) at different levels of canopy depth and predict within-canopy gradients in photosynthetic capacity, leaf N, and LMA.&lt;/p&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Jaideep Joshi&lt;/li&gt;
+&lt;li&gt;Pascal Schneider&lt;/li&gt;
+&lt;li&gt;Prof. Benjamin Stocker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Master thesis - High resolution quantification of seasonal water deficits</title>
+      <link>https://geco-group.org/event/hires_cwd/</link>
+      <pubDate>Tue, 21 Feb 2023 08:46:40 +0100</pubDate>
+      <guid>https://geco-group.org/event/hires_cwd/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Seasonal water deficits, caused by the imbalance of water from the land surface through evapotranspiration and runoff and the gain through precipitation, are an important driver of agricultural productivity and forest growth. Recent research by our group (Stocker et al., 2023) has revealed large spatial heterogeneity of seasonal water deficits across the globe at 5 km resolution - interpreted as a reflection of (otherwise unobservable) rooting zone water storage capacity across the soil and bedrock and of plant access to the groundwater, and as a reflection of water use in cropland areas.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;Novel data resources now provide analysis-ready data at field-scale resolution. This provides an opportunity to extend the analysis of Stocker et al. (2023) to the hillslope-scale. You will develop a workflow to access cloud-hosted Earth Observation data and perform analyses for deriving cumulative water deficits. This will generate crucial insights for a better understanding of the role of terrain in shaping plant water availability and for informing land managers about the sustainability of water resource use.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to land-atmosphere exchange and the carbon cycle - everything else can be learned!&lt;/li&gt;
+&lt;li&gt;Confidence to work with large datasets of the terrestrial biosphere.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are an advantage.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Prof. Benjamin Stocker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Master thesis - Global evapotranspiration modelling</title>
+      <link>https://geco-group.org/event/global_et/</link>
+      <pubDate>Tue, 21 Feb 2023 08:40:38 +0100</pubDate>
+      <guid>https://geco-group.org/event/global_et/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Global terrestrial gross primary production (GPP), i.e., the uptake of CO2 by terrestrial plants, is often limited by the availability of soil water. The amount of water a plant can take up from the soil depends on the soil texture, the depth of plant roots, and the storage capacity of the soil in the plant’s rooting zone. Global vegetation models typically only consider moisture content in the top 2m of soil, which is often not representative of the moisture conditions actually experienced by plants. In recent research, a more accurate global map of root-zone water storage capacity has been developed. This project aims at predicting and analyzing the properties of global evapo-transpiration (ET) based on this new map.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The goals of this project are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Extend a soil water balance model being developed in Prof. Stocker’s group to predict ET based on root-zone water storage capacity (RZWC)&lt;/li&gt;
+&lt;li&gt;Drive the model at a global scale using a recently-developed map of RZWC&lt;/li&gt;
+&lt;li&gt;Analyze the interannual/intraannual variability in ET, test model predictions against the Budyko relationship, and test memory effects (due to water storage) on ET.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to land-atmosphere exchange and the carbon cycle - everything else can be learned!&lt;/li&gt;
+&lt;li&gt;Confidence to work with large datasets of the terrestrial biosphere.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are a prerequisite.&lt;/li&gt;
+&lt;li&gt;Basic understanding of mathematical modelling and a keen interest to delve deeper into modelling and programming (R and Fortran)&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literature&#34;&gt;Literature&lt;/h2&gt;
+&lt;p&gt;Stocker, B.D., Tumber-Dávila, S.J., Konings, A.G. &lt;em&gt;et al.&lt;/em&gt;  Global patterns of water storage in the rooting zones of vegetation. &lt;em&gt;Nat. Geosci.&lt;/em&gt;  (2023). &lt;a href=&#34;https://doi.org/10.1038/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1038/s41561-023-01125-2&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Master thesis - Global land carbon cycle modelling</title>
+      <link>https://geco-group.org/event/global_biomee/</link>
+      <pubDate>Tue, 21 Feb 2023 08:38:39 +0100</pubDate>
+      <guid>https://geco-group.org/event/global_biomee/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Dynamic Global Vegetation Models (DGVMs) are key tools for understanding biosphere-climate feedbacks and transient vegetation dynamics in response to global change. A novel vegetation demography model, the BiomeE, is a mechanistic cohort-based model which simulates vegetation dynamics and biogeochemical processes. This mechanistic model is able to simulate the size dependent competition, and thereby links plant functional traits, physiology, forest demography and stand dynamics. The GECO group has developed of a new framework for modelling of terrestrial biosphere processes (&lt;a href=&#34;https://geco-bern.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;) that combines the BiomeE model with a photosynthesis model using optimality principles (P-model). This framework has been used to run site-level simulations in different regions, including boreal, temperate and tropical forests. Still, a global simulation capturing global patterns, has not carried out yet, but will be the basis for our future research on the global carbon cycle, potentially leading to participation in simulation activities for the Global Carbon Project. This thesis is an ideal entry point for your work in this direction.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/global_biomee_hu1fc26a5764c71c7ad2dd83d1c5d21ac2_1475022_0bb60b5e0ba5bc3736229262bfa4750c.webp 400w,
+               /media/global_biomee_hu1fc26a5764c71c7ad2dd83d1c5d21ac2_1475022_f30e2bdc15bb137e41da1b24a5282103.webp 760w,
+               /media/global_biomee_hu1fc26a5764c71c7ad2dd83d1c5d21ac2_1475022_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/global_biomee_hu1fc26a5764c71c7ad2dd83d1c5d21ac2_1475022_0bb60b5e0ba5bc3736229262bfa4750c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;288&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Above: Prescribed global distribution of plant functional types. Figure from &lt;a href=&#34;https://doi.org/10.5194/gmd-15-8153-2022&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Weng et al., 2022&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop a wrapper for pixel-wise (parallelised) rsofun calls, given a path to global forcing files, as an R package.&lt;/li&gt;
+&lt;li&gt;Run BiomeE with P-model.&lt;/li&gt;
+&lt;li&gt;Preparations for Global Carbon Project simulations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The student is motivated to work and contribute to the development of a new modelling framework.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are a prerequisite.&lt;/li&gt;
+&lt;li&gt;Basic understanding of mathematical modelling and a keen interest to delve deeper into modelling and programming (R)&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literature&#34;&gt;Literature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Weng, E. S., Malyshev, S., Lichstein, J. W., Farrior, C. E., Dybzinski, R., Zhang, T., Shevliakova, E., and Pacala, S. W. 2015: Scaling from individual trees to forests in an Earth system modeling framework using a mathematically tractable model of height-structured competition, Biogeosciences, 12, 2655–2694, &lt;a href=&#34;https://doi.org/10.5194/bg-12-2655-2015&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.5194/bg-12-2655-2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Weng, E., Dybzinski, R., Farrior, C. E., and Pacala, S. W. 2019: Competition alters predicted forest carbon cycle responses to nitrogen availability and elevated CO2: simulations using an explicitly competitive, game-theoretic vegetation demographic model, Biogeosciences, 16, 4577–4599, &lt;a href=&#34;https://doi.org/10.5194/bg-16-4577-2019&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.5194/bg-16-4577-2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stocker, B. D., Wang, H., Smith, N. G., Harrison, S. P., Keenan, T. F., Sandoval, D., Davis, T., and Prentice, I. C. 2020: P-model v1.0: an optimality-based light use efficiency model for simulating ecosystem gross primary production, Geosci. Model Dev., 13, 1545–1581, &lt;a href=&#34;https://doi.org/10.5194/gmd-13-1545-2020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.5194/gmd-13-1545-2020&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Weng, E., Aleinov, I., Singh, R., Puma, M. J., McDermid, S. S., Kiang, N. Y., Kelley, M., Wilcox, K., Dybzinski, R., Farrior, C. E., Pacala, S. W., and Cook, B. I. 2022: Modeling demographic-driven vegetation dynamics and ecosystem biogeochemical cycling in NASA GISS&amp;rsquo;s Earth system model (ModelE-BiomeE v.1.0), Geosci. Model Dev., 15, 8153–8180, &lt;a href=&#34;https://doi.org/10.5194/gmd-15-8153-2022&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.5194/gmd-15-8153-2022&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dr. Laura Marqués&lt;/li&gt;
+&lt;li&gt;Prof. Benjamin Stocker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bachelor thesis - Trends in seasonal water deficits</title>
+      <link>https://geco-group.org/event/cwd_trends/</link>
+      <pubDate>Tue, 21 Feb 2023 08:36:01 +0100</pubDate>
+      <guid>https://geco-group.org/event/cwd_trends/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Droughts have major impacts on fluxes between land and the atmosphere, agricultural production, and the carbon cycle. Future projections of drought magnitude and frequencies are surprisingly divergent and interpretations of trends from Earth System Model outputs have drawn conflicting pictures of drought impact trends in a heating climate. Trends in precipitation, evapotranspiration, soil moisture, and runoff often point in different directions and are relevant for different aspects of what may be referred to as a “droughts”.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;You will target seasonal water deficits as an impact-relevant quantity measuring the severity of droughts. Using outputs from the Climate Model Intercomparison Project Phase 6 (CMIP6), you will derive simulated cumulative water deficit (CWD) time series across the globe for multiple models and investigate their long-term trends.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to land-atmosphere exchange and the water cycle - everything else can be learned!&lt;/li&gt;
+&lt;li&gt;Interest in working with large datasets from Earth System Model outputs.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are an advantage.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Prof. Benjamin Stocker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bachelor thesis - Importance of GPP extremes in eddy covariance data</title>
+      <link>https://geco-group.org/event/gpp_extremes/</link>
+      <pubDate>Tue, 21 Feb 2023 08:32:52 +0100</pubDate>
+      <guid>https://geco-group.org/event/gpp_extremes/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;The gross primary production (GPP) of an ecosystem, that is, the carbon it assimilates via photosynthesis, differs strongly from one year to the next. This variability between years is called the interannual variability (IAV) of GPP and the reasons for why GPP can change substantially from year to year are unclear. From a global scale analysis, we know that the seasonal cycles in precipitation and temperature in semi-arid ecoystems contribute substantially to the global IAV of GPP, highlighting the role of water and heat. We also know that even a few unusual hours in a total year can contribute disproportionately more to an ecosystems annual carbon uptake. For example, just 2% of unusually hot hours can account for ca. 10% of an ecosystems’ total annual GPP. Considering an increase in frequency and intensity of extreme events under climate change, a better quantification and characterisation of GPP extremes is crucial to estimate the future global carbon balance.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The goal of this project is to quantify the role of GPP extremes on an ecosystem’s carbon uptake, using FLUXNET data (half-hourly measured land-atmosphere exchange of carbon dioxide). The first aim is to identify years that show GPP extremes, that is, anomalies in their annual total GPP. Then, a suitable method to assess the effect of extreme days within these anomalous years on the year’s total GPP is explored by (e.g., using a Gini index). Further questions may cover investigating the difference across globally distributed sites or comparing observed against modelled GPP to identify the drivers of GPP extremes.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Most important: High motivation to work on questions related to land-atmosphere exchange and the carbon cycle - everything else can be learned!&lt;/li&gt;
+&lt;li&gt;Confidence to work with large datasets of the terrestrial biosphere.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are an advantage.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literature&#34;&gt;Literature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ahlström A, Raupach MR, Schurgers G, Smith B, Arneth A, Jung M, Reichstein M, Canadell JG, Friedlingstein P, Jain AK, &lt;em&gt;et al.&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;2015&lt;/strong&gt;. The dominant role of semi-arid ecosystems in the trend and variability of the land CO 2 sink. &lt;em&gt;Science&lt;/em&gt; &lt;strong&gt;348&lt;/strong&gt;: 895–899.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kannenberg SA, Bowling DR, Anderegg WRL&lt;/strong&gt;. &lt;strong&gt;2020&lt;/strong&gt;. Hot moments in ecosystem fluxes: High GPP anomalies exert outsized influence on the carbon cycle and are differentially driven by moisture availability across biomes. &lt;em&gt;Environmental Research Letters&lt;/em&gt; &lt;strong&gt;15&lt;/strong&gt;: 054004.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Launiainen S, Katul GG, Leppä K, Kolari P, Aslan T, Grönholm T, Korhonen L, Mammarella I, Vesala T&lt;/strong&gt;. &lt;strong&gt;2022&lt;/strong&gt;. Does growing atmospheric CO 2 explain increasing carbon sink in a boreal coniferous forest? &lt;em&gt;Global Change Biology&lt;/em&gt; &lt;strong&gt;28&lt;/strong&gt;: 2910–2929.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Wieder WR, Butterfield Z, Lindsay K, Lombardozzi DL, Keppel‐Aleks G&lt;/strong&gt;. &lt;strong&gt;2021&lt;/strong&gt;. Interannual and Seasonal Drivers of Carbon Cycle Variability Represented by the Community Earth System Model (CESM2). &lt;em&gt;Global Biogeochemical Cycles&lt;/em&gt; &lt;strong&gt;35&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supervision&#34;&gt;Supervision&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pascal Schneider&lt;/li&gt;
+&lt;li&gt;Prof. Benjamin Stocker&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bachelor thesis - Indentifying frost events and impacts in ecosystem flux measurements</title>
+      <link>https://geco-group.org/event/frost_gpp/</link>
+      <pubDate>Tue, 21 Feb 2023 08:24:51 +0100</pubDate>
+      <guid>https://geco-group.org/event/frost_gpp/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Supervision:&lt;/strong&gt; Dr. Laura Marques and Prof. Benjamin Stocker&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Climate warming is driving an advance of leaf unfolding in trees, promoting longer growing seasons. However, the advance of the start-of-the-season (SOS) can induce &lt;em&gt;false springs&lt;/em&gt;, i.e., a stretch of unexpectedly warmer temperatures in late winter/early spring followed by sudden freezing events. These frost events after the SOS can affect the structure and function of terrestrial ecosystems and have important environmental and economic consequences. Still, there is little consensus on how frost events change under global warming and the implications. Therefore, it is relevant to understand the occurrence of frost events once the growing season has started and how they change among regions in temperate and boreal forests.&lt;/p&gt;
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The goal of this project is to identify when the frost events happen after the SOS and quantify their impact on carbon fluxes. The student will characterize the SOS using phenological measurements and ecosystem-level photosynthesis (gross primary production, GPP). Daily minimum temperatures will be used to calculate the number of frost events. The project design includes combining ground observations, eddy covariance flux measurements, remote sensing data and global climate datasets.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The student is motivated to work with large datasets of the terrestrial biosphere.&lt;/li&gt;
+&lt;li&gt;Experience working with R or other data science tools are an advantage.&lt;/li&gt;
+&lt;li&gt;The student writes the thesis in English.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literature&#34;&gt;Literature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chamberlain,  C.J., Cook, B.I., Morales-Castilla, I. and Wolkovich, E.M. (2021).  Climate change reshapes the drivers of false spring risk across European trees. New Phytol, 229: 323-334.&lt;/li&gt;
+&lt;li&gt;Liu,  Q., Piao, S., Janssens, I.A. et al. (2018). Extension of the growing season increases vegetation exposure to frost. Nat Commun 9, 426 .&lt;/li&gt;
+&lt;li&gt;Hufkens,  K., Friedl, M.A., Keenan, T.F., Sonnentag, O., Bailey, A., O&amp;rsquo;Keefe, J. and Richardson, A.D. (2012). Ecological impacts of a widespread frost event following early spring leaf-out. Glob Change Biol, 18: 2365-2377.&lt;/li&gt;
+&lt;li&gt;Piao, S, Liu, Q, Chen, A, et al. (2019). Plant phenology and global climate change: Current progresses and challenges. Glob Change Biol. 25: 1922– 1940.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Master and Bachelors theses - Topographic controls on vegetation patterns</title>
+      <link>https://geco-group.org/event/topo_veg/</link>
+      <pubDate>Tue, 21 Feb 2023 08:19:24 +0100</pubDate>
+      <guid>https://geco-group.org/event/topo_veg/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Supervision:&lt;/strong&gt; Dr. Koen Hufkens and Prof. Benjamin Stocker&lt;/p&gt;
+&lt;p&gt;We call on students to determine the importance of topographic and soil factors on natural vegetative landscape components (forest cover fraction, vegetation height, woody fraction).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/topo_veg_hu51805ea3816630da8584302a3a85823a_2235885_2bf19d0f703817b555b0eb7e38ac385c.webp 400w,
+               /media/topo_veg_hu51805ea3816630da8584302a3a85823a_2235885_f739eef616b39c6a7a9421f644d9bab8.webp 760w,
+               /media/topo_veg_hu51805ea3816630da8584302a3a85823a_2235885_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/topo_veg_hu51805ea3816630da8584302a3a85823a_2235885_2bf19d0f703817b555b0eb7e38ac385c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;562&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Above: Images from Fan et al., 2019 &lt;a href=&#34;https://doi.org/10.1029/2018WR023903&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1029/2018WR023903&lt;/a&gt;, (a) (&lt;a href=&#34;https://en.wikipedia.org/wiki/Desert_riparian;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Desert_riparian;&lt;/a&gt; (b) GoogleEarth; (c) photo by Andrew Plumptre/WCS, &lt;a href=&#34;https://news.mongabay.com/2014/11/mapping&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://news.mongabay.com/2014/11/mapping&lt;/a&gt;‐mistake‐leaves‐wildlife‐at‐risk/; (d) &lt;a href=&#34;http://wikimapia.org/8582923/Pantanal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://wikimapia.org/8582923/Pantanal&lt;/a&gt;‐Mato‐Grossense‐NationalPark&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Topographic features induce strong differences in the local micro-climate due to varying degrees of water availability (drainage) and insolation. Although these patterns are intuitive and readily visible in the landscape they are not considered in vegetation modelling due to scale issues. As a first step in improving vegetation modelling a deeper understanding of these patterns is required.&lt;/p&gt;
+&lt;p&gt;We invite students to model remote sensing based metrics of vegetation responses (e.g. vegetation greenness) in relation to different topographic predictors. There will be a strong focus on both the scientific component as well as the implementation, for which students will be required to use the Microsoft Planetary Computer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Every ton of CO2 counts</title>
+      <link>https://geco-group.org/post/every-ton/</link>
+      <pubDate>Mon, 20 Feb 2023 22:37:04 +0100</pubDate>
+      <guid>https://geco-group.org/post/every-ton/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;We are not the last generation that can make a change but the first of many that must. Here are some thoughts I wanted to share with fellow snow enthusiasts and others about what cumulative emissions and tipping points mean for the framing of the need for climate action.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This blog was originially published in German for &lt;a href=&#34;https://www.protectourwinters.ch/de/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Protect Our Winters, Switzerland&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The dramatic images of ski slopes in the Alps, desperately groomed with artificial snow and eerily set against a backdrop of green mountains, offer a glimpse of the future. And the future strikes faster than many of us expected. At stake here is what we hold dear. These images are a wake-up call to keep the world the way we love it as outdoor enthusiasts, skiers, snowboarders, climbers, sledders, skaters, snow hikers, and other snow lovers. We are reminded that the climate is changing, that the snow is receding, and that the world as we know it is melting away and is becoming a memory of our past. It&amp;rsquo;s also a wake-up call to protect our winters. &lt;a href=&#34;https://www.protectourwinters.ch/de/handeln/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;POW shows that we can&lt;/a&gt;. Our enthusiasm for nature drives us to preserve it. Climate protection and winter sports belong together.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Relative snow depth&#34; srcset=&#34;
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_58f050c97ba705a8cefbc375bf9234c5.webp 400w,
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_bdd7b446725500c9fd68fbd23d7b787f.webp 760w,
+               /media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/snow_depth_slf_hu8215d7e9742d50d0fbeffa97765ef370_2914725_58f050c97ba705a8cefbc375bf9234c5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Snow depth in Switzerland as a percentage of the long-term average for the respective day of the year. From &lt;a href=&#34;https://whiterisk.ch/de/snow/comparative-depth&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SLF whiterisk.ch&lt;/a&gt;, 21 February 2023. The map shows that the current snow depth is only between 0 and 60% of the typical depth observed around the 21st of February (average across a 30-year reference period, see &lt;a href=&#34;https://www.slf.ch/de/lawinenbulletin-und-schneesituation/schneekarten/details-zu-schneehoehe-relativ.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It is clear that our enthusiasm for the crude wilderness and the cold winter leaves traces. There is no life without traces. That&amp;rsquo;s POW&amp;rsquo;s message: we can and should strive to reduce our impact on the planet and advocate for change, even as we acknowledge that we are not perfect and leave traces. We are imperfect advocates. Yet it is better to be imperfect advocates than to bury our heads in the sand. This message speaks to me as an avid skier, as someone who feels almost patriotic when the alpenglühen of the snow-covered Alps sets in (their fiery appearance of the snow-covered mountains in the setting sun). And it speaks to me as a climate scientist. Because it makes sense - scientifically! Here&amp;rsquo;s why.&lt;/p&gt;
+&lt;p&gt;Suppose I were a professional skier (which I dreamed of being at some point in my life, and perhaps even today). I decide to avoid two of my several planned flights this year. This benefits the climate just as much as if you decide not to book your only two planned flights for your next vacation and celebrate an absolutely flight-free year. Although the latter seems purer, more determined, feels more rewarding, and definitely makes for a better-sounding Instagram post, the climate doesn&amp;rsquo;t care. A ton of CO&lt;sub&gt;2&lt;/sub&gt; avoided is a ton avoided - no matter by whom, when, or where on Earth.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Global mean temperature and cumulative carbon emissions&#34; srcset=&#34;
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_86cb14d443fb19f3c4fad6a208ecfd7c.webp 400w,
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_b6f3ce19dbf99bdc142cf34f7971b88f.webp 760w,
+               /media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/cumulative_emissions_en_hub748f77588dc525c655fa7fc46898c59_1491831_86cb14d443fb19f3c4fad6a208ecfd7c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;457&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;Top: The more CO&lt;sub&gt;2&lt;/sub&gt; is emitted, the more the mean global temperature rises. CO&lt;sub&gt;2&lt;/sub&gt; is mainly emitted by fossil fuel combustion and deforestation. The curve is composed of the relationship between the summed CO&lt;sub&gt;2&lt;/sub&gt; production and the temperature increase since 1850. The data are observations for the past (black line and grey band) and from projections with climate models following different future scenarios (SSP1-1.9 is a scenario with rapid reduction of CO&lt;sub&gt;2&lt;/sub&gt; emissions, SSP5-8.5 is a scenario of strong increase of CO&lt;sub&gt;2&lt;/sub&gt; emissions). Graphic adapted from IPCC AR6 WG1 Summary for Policymakers.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Climate research shows that each ton of CO&lt;sub&gt;2&lt;/sub&gt; we emit causes a certain amount of global warming (see graph above). The warming per ton of CO&lt;sub&gt;2&lt;/sub&gt; emitted is roughly constant. Observations and projections from climate models show that the average global temperature is increasing with the sum of all CO&lt;sub&gt;2&lt;/sub&gt; emissions since 1850.&lt;/p&gt;
+&lt;p&gt;This means that every ton, every gram of CO&lt;sub&gt;2&lt;/sub&gt; counts. Every ton contributes equally to climate heating. The climate doesn&amp;rsquo;t care when, where, and anyway by whom the CO&lt;sub&gt;2&lt;/sub&gt; is emitted. A ton avoided is a ton avoided. This fact contains an important message: it is never too late to avoid a ton of CO&lt;sub&gt;2&lt;/sub&gt; emissions. Every generation must work to leave the carbon in the ground and save the remaining forests and other carbon-rich ecosystems from their destruction. It is never too late. However, we must continue climate action efforts - starting now and for all generations to come.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We are not the last generation to save the planet. We are the first of many future generations to make a change.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It also means that we are not the last generation to make a difference. On the contrary. We are the first of many generations to make a change. We are the first generation that can seriously turn the wheel in terms of personal life choices and political change that we can set in motion by voting, electing politicians, and by protesting. Here in Switzerland, where I live, we are the first generation to vote on important climate legislation, and we have a second chance this year with the upcoming vote on the counter-proposal to the Glacier Initiative.&lt;/p&gt;
+&lt;p&gt;It would be fatal to abandon efforts even if the world has warmed by 1.5 degrees Celsius - the number the global community has set as a target. There is no magic threshold at this temperature rise. There are tipping points in the climate system, but we don&amp;rsquo;t know exactly when they will be reached. That&amp;rsquo;s a big &lt;a href=&#34;https://www.science.org/doi/10.1126/science.abn7950&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research question&lt;/a&gt; that&amp;rsquo;s still open. But it doesn&amp;rsquo;t matter for our decision to protect our winters.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s like a white-out - the situation when you completely lose your bearings in the fog and snow. To go further would be to enter unknown and potentially dangerous terrain and to continue to approach a possible precipice. In this situation, we know it is safer to turn around and retrace our steps. By burning fossil fuels and cutting down forests, we have already entered unknown terrain. The climate today is not the same as it was fifty years ago. However, the further we move into this unknown terrain, the more damage we have to expect to our ecosystems, our food production, and our infrastructure. With each additional ton of carbon burned, we march further toward uncertainty. The risk of unexpected climate events and crossing a dangerous climate tipping point increases the further we advance into the unknown terrain. More climate change will make our lives more difficult. For this reason, we must do everything we can to stay in the safe zone.
+We have already warmed the planet. Some loss of glaciers and snow is already underway. Even with stringent climate action, we will lose more glaciers in the coming decades. &lt;a href=&#34;https://www.science.org/doi/10.1126/science.abo1324&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;This recent study&lt;/a&gt; backs up this prediction with disturbing numbers. Glaciers behave like a large cargo ship. Even if the engine stops, the ship will keep going for a while. Even if we drastically reduce CO&lt;sub&gt;2&lt;/sub&gt; emissions, many glaciers will disappear.&lt;/p&gt;
+&lt;p&gt;When it comes to warming the planet, it&amp;rsquo;s a different story. As soon as the emission of greenhouse gases is stopped, we stop heating the Earth (as explained in &lt;a href=&#34;https://www.carbonbrief.org/explainer-will-global-warming-stop-as-soon-as-net-zero-emissions-are-reached/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this blog&lt;/a&gt;). It is in our own hands. This is very encouraging. It means we can turn the wheel to avoid even more dangerous levels of climate change and trespassing dangerous tipping points.&lt;/p&gt;
+&lt;p&gt;We must avoid emissions of CO&lt;sub&gt;2&lt;/sub&gt; and other greenhouse gases to prevent further warming of the planet. Every ton of CO&lt;sub&gt;2&lt;/sub&gt; counts, whether it&amp;rsquo;s today or tomorrow. No matter what you did yesterday, you can start fresh the next day. You don&amp;rsquo;t have to be perfect to take action on climate change and be part of the change we need to &lt;strong&gt;protect our winters&lt;/strong&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://www.protectourwinters.ch&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Protect Our Winters&lt;/a&gt; is a non-governmental organization that advocates for climate action and political change. POW speaks to snow enthusiasts and other concerned, but winter fun-loving people through their &lt;a href=&#34;https://www.protectourwinters.ch/de/netzwerk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alliance Members&lt;/a&gt; - professional skiers, snowboarders and others. As a ski touring aficionado and climate scientist, I am proud to be part of the &lt;a href=&#34;https://www.protectourwinters.ch/de/netzwerk/science-alliance/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;POW Science Alliance&lt;/a&gt;. I am convinced that speaking to a wide diversity of voters and fellow Earthlings through shared values and a common understanding of what we want to protect (winters!) is a powerful approach to motivating climate action.&lt;/em&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_621bec54e3701bfb1bdaa6898e0feaf4.webp 400w,
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_5dc49a1e98a6ef25664364981e0bfdb9.webp 760w,
+               /media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/skiing_hu9b5ece169939f7db2b5dd93fc7fc68a1_6276963_621bec54e3701bfb1bdaa6898e0feaf4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimal root zone water storage capacity</title>
+      <link>https://geco-group.org/post/rooting-zone/</link>
+      <pubDate>Thu, 09 Feb 2023 07:56:38 +0100</pubDate>
+      <guid>https://geco-group.org/post/rooting-zone/</guid>
+      <description>&lt;p&gt;Root zone water storage capacity (S&lt;sub&gt;0&lt;/sub&gt;) is related to the rooting depth and the water holding capacity across the soil profile. It is an important property in determining ecosystem photosynthesis and evapotranspiration in rain-free periods and controls the sensitivity of ecosystems and their carbon and water fluxes to drought conditions. While S&lt;sub&gt;0&lt;/sub&gt; is an essential parameter of land surface models, it is almost impossible to measure in the field, at least not across large scales. Considering that S&lt;sub&gt;0&lt;/sub&gt; is also highly variable across small spatial scales, and that it varies massively between species and between different biomes, it is really a sort of elephant in the room for large-scale drought impacts modeling.&lt;/p&gt;
+&lt;p&gt;Previous studies have estimated the root zone water storage capacity based on a water mass balance approach where the parallel time series of evapotranspiration (ET) and precipitation (&lt;em&gt;P&lt;/em&gt;) are considered (e.g., &lt;a href=&#34;http://doi.wiley.com/10.1002/2014GL061668&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gao et al., 2014&lt;/a&gt;). This approach was also the starting point of our analysis, which has been published today in &lt;em&gt;Nature Geoscience&lt;/em&gt; &lt;a href=&#34;https://www.nature.com/articles/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Stocker et al., 2023)&lt;/a&gt;. Using remote sensing and climate reanalysis data, provided at ~5 km resolution, we derived continuous daily time series of the cumulative water deficit (CWD) over the years 2003-2017 for each pixel across the globe. Knowing how much water is lost from the land surface during dry periods is the key for estimating how much locally stored water plants have access to. With this rationale, we calculated a first estimate for the global distribution of S&lt;sub&gt;0&lt;/sub&gt; , informed by extreme values of annual CWD maxima in each pixel.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-spatial-variation-of-the-rooting-zone-water-storage-capacity-estimated-by-cumulative-water-deficit-maxima&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Rooting zone water storage capacity&#34; srcset=&#34;
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_f80d1cdd62d0065e143eb70af588079d.webp 400w,
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_19c1428ff1891b5eea41f6d59d54c391.webp 760w,
+               /media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/scwdx80_hu00e9e7a5460b4bed17183de008a77553_1246507_f80d1cdd62d0065e143eb70af588079d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Spatial variation of the rooting zone water storage capacity, estimated by cumulative water deficit maxima.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;It should be noted that a key ingredient to such diagnosed S&lt;sub&gt;0&lt;/sub&gt; estimates is the ET data. The challenging aspect is that most remote sensing-based ET products make an assumption about S&lt;sub&gt;0&lt;/sub&gt; - either directly or indirectly - for determining the sensitivity of ET to a drying of the soil. Of course, when using such ET products, the diagnosed S&lt;sub&gt;0&lt;/sub&gt; just reflects assumptions embodied in the algorithm used for estimating ET. There is a clear risk for circularity. This made us search for ET estimates that are free of such an assumption. As an additional help in guiding our search for a suitable ET estimate was its performance when evaluated against local measurements. Our search identified a clear winner: ALEXI-ET (&lt;a href=&#34;https://doi.org/10.1002/2017GL074952&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hain &amp;amp; Anderson, 2017&lt;/a&gt;). Instead of relying on an a priori specified water stress function, it makes use of information gleaned from surface temperature remote sensing and parallel climate reanalysis. The ALEXI algorithm thus infers ET from the surface and atmospheric energy budget. Furthermore, our evaluation of different remote sensing-based ET products revealed that ALEXI-ET yields ET estimates that exhibit no systematic bias with the level of water stress - in contrast to the alternatives we tested. This gave us confidence to move ahead.&lt;/p&gt;
+&lt;p&gt;The next question we addressed was whether the CWD maxima reflect root zone dimensions or (just) the hydroclimate. Interpreting apparent CWD maxima as a reflection of the rooting depth implicitly assumes that the actual rooting zone water storage capacity is just large enough and roots just deep enough to yield the apparent water deficits in the dry season. Given the opportunity costs of building deep roots, such a sizing would be optimal from an eco-evolutionary perspective. To test whether this is the case, we looked at the vegetation activity and analyzed how it responds to water deficits. As a measure for vegetation activity, we focus on sun-induced fluorescence (SIF), normalized by incident solar radiation, and on the evaporative fraction, defined as ET divided by net radiation. Regressing vegetation activity against CWD yields information about the sensitivity of vegetation to water stress from which we estimated the CWD at which vegetation activity ceases. If this “cessation CWD” agrees with the magnitude of CWD extremes, we have a further indication that roots are indeed just deep enough to get the water needed to sustain rare drought events. And indeed, we found close correspondence between the two quantities.&lt;/p&gt;
+&lt;p&gt;As a further test of our remote sensing-based S&lt;sub&gt;0&lt;/sub&gt; estimates, we made use of a recently published comprehensive compilation of field data of rooting depths from over 5000 individual field observations across the globe and covering all major biomes (&lt;a href=&#34;https://doi.org/10.1111/nph.18031&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumber-Davila et al., 2022&lt;/a&gt;). Also at this scale, we found consistent patterns. The deepest roots are found where seasonal water deficits are largest and the shallowest roots are found in climates where annual CWD maxima are small. Interestingly, the largest root zone water storage capacities and rooting depths are diagnosed from space and observed in the field not in the driest climates, but in monsoonal climates and biomes with perennial plants and where (more or less) green vegetation cover is maintained throughout the year. In contrast, vegetation pursues an “ephemeral” strategy in the driest climates - relieving the necessity of rooting excessively deep for maintaining activity. This is probably also an expression of an optimal balancing of trade-offs - investing in deep roots is only a viable option if it is not outweighed by the costs of rebuilding leaves.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-modeled-and-observed-rooting-depth-by-biomes&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Rooting depth by biomes&#34; srcset=&#34;
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1fe2bf7496694aa2593d3e02a8600db4.webp 400w,
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_8a05651591dd49f01eb960dd58459a14.webp 760w,
+               /media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://geco-group.org/media/rooting_depth_modobs_hu7dd4585800aac74e90e11c3857cea96e_327047_1fe2bf7496694aa2593d3e02a8600db4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;369&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Modeled and observed rooting depth by biomes.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Apparent cumulative water deficits, the sensitivity of vegetation activity to dry conditions, and the rooting depth of plants converge to consistent patterns. The implications of these insights are manifold. First, we now have information about the global distribution of the apparent rooting zone water storage capacity which can be used to better parametrise land surface models. This may be useful for removing persistent bias in ET simulations (&lt;a href=&#34;https://doi.org/10.1002/2017JD027194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ma et al., 2018&lt;/a&gt;). Second, our maps document large variations of S&lt;sub&gt;0&lt;/sub&gt; across multiple scales - across the Earth’s biomes, across land uses (irrigated croplands emerge as hotspots of water losses), and across topography (larger water losses along rivers and deltas than in flat upland areas). This insight is enabled by the high spatial resolution of our global-scale analysis. Third, and maybe most strikingly, our estimates of S&lt;sub&gt;0&lt;/sub&gt; suggest that plants source more water than can be stored in two meters of soil across a third of the Earth’s surface. We don’t know the soil depth across the globe very well. Models have to rely on assumptions and commonly use prescribed rooting depths. The picture drawn from our S&lt;sub&gt;0&lt;/sub&gt; estimates and from other emerging research (&lt;a href=&#34;https://doi.org/10.1073/pnas.1800141115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rempe et al., 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1038/s41586-021-03761-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;McCormick et al., 2021&lt;/a&gt;) is that plant-accessible water stores are surprisingly large in many places and that water stored in the weathered bedrock and groundwater probably play a more important role in regulating land-atmosphere exchange of water vapor and photosynthesis than is currently appreciated and considered in land surface and Earth system models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You can read the full paper here:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Stocker, B.D., Tumber-Davila, S.J., Konings, A.G., Anderson, M.B., Hain, C. and Jackson, R.B.: Global patterns of water storage in the rooting zones of vegetation, &lt;em&gt;Nature Geoscience&lt;/em&gt;, &lt;a href=&#34;https://www.nature.com/articles/s41561-023-01125-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nature.com/articles/s41561-023-01125-2&lt;/a&gt;, 2023&lt;/p&gt;
+&lt;h2 id=&#34;data-download&#34;&gt;Data download&lt;/h2&gt;
+&lt;p&gt;Global datasets of cumulative water deficit maxima and apparent rooting depth are available on &lt;a href=&#34;https://doi.org/10.5281/zenodo.5515246&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zenodo&lt;/a&gt; as NetCDF files.&lt;/p&gt;
+&lt;h2 id=&#34;open-access-code&#34;&gt;Open access code&lt;/h2&gt;
+&lt;p&gt;The algorithm to derive cumulative water deficit time series and a list of water deficit events (consecutive days with a negative water balance), is made available as an &lt;a href=&#34;https://geco-bern.github.io/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R package&lt;/a&gt;, published on Zenodo with DOI &lt;a href=&#34;https://doi.org/10.5281/zenodo.5359053&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.5281/zenodo.5359053&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Analysis code is available from GitHub repository &lt;a href=&#34;https://github.com/geco-bern/mct/tree/v4.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;mct&lt;/code&gt; at tag v4.0&lt;/a&gt;, published on Zenodo with DOI &lt;a href=&#34;https://doi.org/10.5281/zenodo.7429129&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.5281/zenodo.7429129&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;global-map-as-poster&#34;&gt;Global map as poster&lt;/h2&gt;
+&lt;p&gt;A0-sized posters of high-fidelity (vector graphics, PDF) maps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rooting-zone water-storage capacity (&lt;a href=&#34;https://github.com/geco-bern/GECO_media/blob/main/publications/Stocker_2023a_NGS/poster_mct_hires.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download link&lt;/a&gt;, 45 MB)&lt;/li&gt;
+&lt;li&gt;apparent rooting depth (&lt;a href=&#34;https://github.com/geco-bern/GECO_media/blob/main/publications/Stocker_2023a_NGS/poster_mct_zroot_hires.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download link&lt;/a&gt;, 48 MB)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Extensive global wetland loss over the past three centuries</title>
+      <link>https://geco-group.org/publication/fluetchouinard-23-nat/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/publication/fluetchouinard-23-nat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global patterns of water storage in the rooting zones of vegetation</title>
+      <link>https://geco-group.org/publication/stocker-23-natgeo/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/publication/stocker-23-natgeo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global patterns of tree density are contingent upon local determinants in the world’s natural forests</title>
+      <link>https://geco-group.org/publication/madrigalgonzalez-23-natcomm/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/publication/madrigalgonzalez-23-natcomm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When things get MESI: the Manipulation Experiments Synthesis Initiative – a coordinated effort to synthesize terrestrial global change experiments</title>
+      <link>https://geco-group.org/publication/vansundert-23-gcb/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/publication/vansundert-23-gcb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>A Song of Carbon And Nitrogen: Part 1 - The Setting</title>
       <link>https://geco-group.org/post/song-cn/</link>
-      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Jan 2023 22:37:04 +0100</pubDate>
       <guid>https://geco-group.org/post/song-cn/</guid>
       <description>&lt;h2 id=&#34;part-1---the-setting&#34;&gt;Part 1 - The Setting&lt;/h2&gt;
 &lt;p&gt;Have you ever looked at a forest and wondered about where all this wood comes from? Like all plants, trees have the magnificent capability to draw gaseous carbon dioxide from the air and turn it into hard touchable wood. But trees do not only need carbon to grow. Like humans, they need other nutrients to build their leaves, stems, and roots. A major nutrient to do so is nitrogen - another element well hidden from our eyes that actually makes up about 80% of our earth&amp;rsquo;s atmosphere.&lt;/p&gt;
@@ -44,22 +690,6 @@
     </item>
     
     <item>
-      <title>When things get MESI: the Manipulation Experiments Synthesis Initiative – a coordinated effort to synthesize terrestrial global change experiments</title>
-      <link>https://geco-group.org/publication/vansundert-23-gcb/</link>
-      <pubDate>Fri, 13 Jan 2023 10:26:13 +0000</pubDate>
-      <guid>https://geco-group.org/publication/vansundert-23-gcb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Global patterns of tree density are contingent upon local determinants in the world’s natural forests</title>
-      <link>https://geco-group.org/publication/madrigalgonzalez-23-natcomm/</link>
-      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://geco-group.org/publication/madrigalgonzalez-23-natcomm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Acclimation of phenology relieves leaf longevity constraints in deciduous forests</title>
       <link>https://geco-group.org/publication/marques-23-natee/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
@@ -68,7 +698,7 @@
     </item>
     
     <item>
-      <title>Master thesis - Modelling biophysical limits to forest production</title>
+      <title>Master thesis - Sink vs. source control on tree growth</title>
       <link>https://geco-group.org/event/sinksource/</link>
       <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://geco-group.org/event/sinksource/</guid>
@@ -80,7 +710,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
  --&gt;
-&lt;p&gt;&lt;strong&gt;Main supervision:&lt;/strong&gt; Prof. Dr. Benjamin Stocker
+&lt;p&gt;&lt;strong&gt;Main supervision:&lt;/strong&gt; Prof. Dr. Benjamin Stocker, Dr. Jaideep Joshi
 &lt;strong&gt;Co-supervision:&lt;/strong&gt; Dr. Antoine Cabon, WSL Birmensdorf&lt;/p&gt;
 &lt;p&gt;Forests currently represent a large carbon sink, offsetting a quarter of human CO2 emissions each year, bur large uncertainty remains on the future strength of this sink. Namely, vegetation models assume that tree growth is essentially limited by photosynthesis, but recent evidence suggests that currently unaccounted for biophysical limitations to tree growth by low temperatures and water stress can substantially decouple tree growth from photosynthesis. The degree to which biophysical limitations might slow down forest carbon storage is still unclear but has potentially critical implications for climate projections.&lt;/p&gt;
 &lt;p&gt;The objective of this project is to implement biophysical limitations to tree growth in an established mechanistic vegetation model in order to quantify the effect of these new controls on forest primary production. This will require (1) designing the integration of fine scale biophysical equations with carbon-based tree growth schemes of the vegetation model, (2) evaluating model performance against annual and decadal observations of historical tree growth and forest production across Europe and (3) simulate forest production using current and new tree growth schemes to evaluate the impact of biophysical limitations on forest production under different climate scenarios.&lt;/p&gt;
@@ -161,9 +791,9 @@
     
     <item>
       <title>Master thesis - Global ecosystem flux modelling</title>
-      <link>https://geco-group.org/event/eeo_fluxes/</link>
+      <link>https://geco-group.org/event_old/eeo_fluxes/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://geco-group.org/event/eeo_fluxes/</guid>
+      <guid>https://geco-group.org/event_old/eeo_fluxes/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -183,9 +813,9 @@
     
     <item>
       <title>Master thesis - Preindustrial land use change</title>
-      <link>https://geco-group.org/event/landcover6k/</link>
+      <link>https://geco-group.org/event_old/landcover6k/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://geco-group.org/event/landcover6k/</guid>
+      <guid>https://geco-group.org/event_old/landcover6k/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -240,6 +870,14 @@
       <link>https://geco-group.org/publication/kladny-22-biorxiv/</link>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://geco-group.org/publication/kladny-22-biorxiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Environmental controls on the light use efficiency of terrestrial gross primary production</title>
+      <link>https://geco-group.org/publication/bloomfield-22-gcb/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://geco-group.org/publication/bloomfield-22-gcb/</guid>
       <description></description>
     </item>
     
@@ -968,7 +1606,7 @@ url_video: &amp;quot;&amp;quot;&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Findable&lt;/strong&gt; by publishing on &lt;a href=&#34;zenodo.org/stineb&#34;&gt;&lt;em&gt;Zenodo&lt;/em&gt;&lt;/a&gt; and other premanent repositories,&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Openly accessible&lt;/strong&gt; through &lt;a href=&#34;github.com/stineb/mindproject&#34;&gt;&lt;em&gt;github&lt;/em&gt;&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reusable&lt;/strong&gt; through free open-source software packages (see for example &lt;a href=&#34;computationales.github.io/rpmodel&#34;&gt;rpmodel&lt;/a&gt;) and comprehensive documentation (see for example &lt;a href=&#34;stineb.github.io/sofun&#34;&gt;SOFUN&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusable&lt;/strong&gt; through free open-source software packages (see for example &lt;a href=&#34;geco-bern.github.io/rpmodel&#34;&gt;rpmodel&lt;/a&gt;) and comprehensive documentation (see for example &lt;a href=&#34;stineb.github.io/sofun&#34;&gt;SOFUN&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;the-project&#34;&gt;The project&lt;/h2&gt;
 &lt;p&gt;This project will offer three fully funded positions:&lt;/p&gt;
@@ -1172,37 +1810,37 @@ url_video: &amp;quot;&amp;quot;&lt;/li&gt;
       <link>https://geco-group.org/data_code/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://geco-group.org/data_code/</guid>
-      <description>&lt;p&gt;A complete and up-to-date overview of our open source products is on GitHub &lt;a href=&#34;https://github.com/computationales&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;A complete and up-to-date overview of our open source products is on GitHub &lt;a href=&#34;https://github.com/geco-bern&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As a group, we are committed to an Open Science Practice. We&amp;rsquo;re building an environment of open source tools for ecosystem data and modelling. This should empower the community to use latest methodological innovations, developed in our group. Here is a list of our most important contributions:&lt;/p&gt;
 &lt;h1 id=&#34;code&#34;&gt;Code&lt;/h1&gt;
-&lt;h2 id=&#34;rpmodelhttpscomputationalesgithubiorpmodel&#34;&gt;&lt;a href=&#34;https://computationales.github.io/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rpmodel&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;An implementation of the &lt;em&gt;P-model&lt;/em&gt; for leaf-level acclimation of photosynthesis &lt;a href=&#34;https://gmd.copernicus.org/articles/13/1545/2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stocker et al., 2019 &lt;em&gt;GMD&lt;/em&gt;&lt;/a&gt;). Implemented as an R package (fully in R). This is used as reference code for P-model implementations in other modelling frameworks and for experimental model development. For efficient time series simulations use its implementation within &lt;a href=&#34;https://computationales.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://computationales.github.io/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rpmodelhttpsgeco-berngithubiorpmodel&#34;&gt;&lt;a href=&#34;https://geco-bern.github.io/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rpmodel&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;An implementation of the &lt;em&gt;P-model&lt;/em&gt; for leaf-level acclimation of photosynthesis &lt;a href=&#34;https://gmd.copernicus.org/articles/13/1545/2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stocker et al., 2019 &lt;em&gt;GMD&lt;/em&gt;&lt;/a&gt;). Implemented as an R package (fully in R). This is used as reference code for P-model implementations in other modelling frameworks and for experimental model development. For efficient time series simulations use its implementation within &lt;a href=&#34;https://geco-bern.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://geco-bern.github.io/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/rpmodel/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code on CRAN&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/computationales/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/rpmodel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;rsofunhttpscomputationalesgithubiorsofun&#34;&gt;&lt;a href=&#34;https://computationales.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;rsofunhttpsgeco-berngithubiorsofun&#34;&gt;&lt;a href=&#34;https://geco-bern.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A modelling framework for site-scale simulations of ecosystem processes, implemented as an R package (back-end in Fortran 90). Implements the following models:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;P-model&lt;/em&gt; for leaf-level acclimation of photosynthesis, &lt;a href=&#34;https://gmd.copernicus.org/articles/13/1545/2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stocker et al., 2019 &lt;em&gt;GMD&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;SPLASH&lt;/em&gt; for bioclimatic variables, including the surface radiation budget and the soil water balance, &lt;a href=&#34;https://gmd.copernicus.org/articles/10/689/2017/gmd-10-689-2017.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Davis et al., 2017 &lt;em&gt;GMD&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;LM3-PPA&lt;/em&gt; for comprehensive simulations of ecosystem carbon and water cycling, tree growth, and tree cohort-explicit forest dynamics following the Perfect Plasticity Approximation, &lt;a href=&#34;www.biogeosciences.net/12/2655/2015/doi:10.5194/bg-12-2655-2015&#34;&gt;Weng et al., 2015&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://computationales.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://geco-bern.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.3759405&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/computationales/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLgcfjtTdT1h9EJd7_iy-ZvrUjpoY-r-C8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;ingestrhttpscomputationalesgithubioingestr&#34;&gt;&lt;a href=&#34;https://computationales.github.io/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ingestr&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Functions to extract (ingest) environmental point data from large global files or remote data servers and create time series at user-specified temporal resolution. Facilitates forcing and evaluation data preparation for &lt;a href=&#34;https://computationales.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;. The main functionalities are:&lt;/p&gt;
+&lt;h2 id=&#34;ingestrhttpsgeco-berngithubioingestr&#34;&gt;&lt;a href=&#34;https://geco-bern.github.io/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ingestr&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Functions to extract (ingest) environmental point data from large global files or remote data servers and create time series at user-specified temporal resolution. Facilitates forcing and evaluation data preparation for &lt;a href=&#34;https://geco-bern.github.io/rsofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rsofun&lt;/a&gt;. The main functionalities are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Temporal downscaling from montly to daily resolution&lt;/li&gt;
 &lt;li&gt;Quality filtering, temporal interpolation and smoothing of remote sensing data&lt;/li&gt;
 &lt;li&gt;Handling of different APIs and file formats, returning ingested data in tidy format.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://computationales.github.io/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://geco-bern.github.io/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.4495563&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/computationales/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/ingestr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;sofunhttpsstinebgithubiosofun&#34;&gt;&lt;a href=&#34;https://stineb.github.io/sofun/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SOFUN&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A modular modelling framework for global-scale simulations of ecosystem processes, implemented in Fortran 90. . Implements the following models:&lt;/p&gt;
@@ -1218,11 +1856,11 @@ url_video: &amp;quot;&amp;quot;&lt;/li&gt;
 &lt;p&gt;A cost-efficient TOPMODEL implementation to simulate sub-grid spatio-temporal dynamics of global wetlands and peatlands (&lt;a href=&#34;https://gmd.copernicus.org/articles/7/3089/2014/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stocker et al., 2014 &lt;em&gt;GMD&lt;/em&gt;&lt;/a&gt;). Written in Fortran.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/stineb/dyptop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;cwd&#34;&gt;cwd&lt;/h2&gt;
+&lt;h2 id=&#34;cwdhttpsgeco-berngithubiocwd&#34;&gt;&lt;a href=&#34;https://geco-bern.github.io/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cwd&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A light R package for deriving cumulative water deficits, given time series of evapotranspiration and precipitation.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://stineb.github.io/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://geco-bern.github.io/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.5359053&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/stineb/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/geco-bern/cwd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Development code&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;data-and-outputs&#34;&gt;Data and outputs&lt;/h1&gt;
 &lt;ul&gt;
@@ -1230,6 +1868,9 @@ url_video: &amp;quot;&amp;quot;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.5515246&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SCWDX80 and zCWDX80&lt;/a&gt;: Global rooting zone water storage capacity (SCWDX80, mm) and rooting depth (zCWDX80, mm) estimates from Stocker et al., (2021) &lt;em&gt;BiorXiv&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.3559850&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GPP at FLUXNET Tier 1 sites from P-model&lt;/a&gt;: Gross primary production, simulated by the P-model for each FLUXNET 2015 Tier 1 site. From stocker et al. (2020) &lt;em&gt;GMD&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Please note:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The authors of these packages are open to collaborate. Where substantial intellectual inputs are provided by us, we ask for credit. Intellectual input can take the form of (but is not limited to) custom code, data manipulation, or methodological advice (including experimental design). The form of credit is to be determined in mutual agreement, considering contributions, and may include the authorship on manuscripts or on other research products resulting from respective work. For simple questions regarding the functioning of our open source software, please refer first to the extensive documentation on respective websites (see links above), our &lt;a href=&#34;https://www.youtube.com/@geco-group&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube channel&lt;/a&gt;, and related published papers. For remaining questions, please raise an issue on Github (in the respective repository). Of course, for such types of support and issue resolution, we do not expect co-authorships. Fair acknowledgements and properly cited software and literature is appreciated.&lt;/p&gt;
 </description>
     </item>
     
